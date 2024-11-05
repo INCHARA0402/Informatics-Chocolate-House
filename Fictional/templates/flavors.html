@@ -1,0 +1,13 @@
+<h2>Seasonal Flavors</h2>
+<div style="background-color: #c0aab7; padding: 20px; border-radius: 8px;"> 
+<ul style="list-style-type: none; padding: 0; margin: 0;">
+    {% for flavor in flavors %}
+    <li style="display: flex; justify-content: space-between; padding: 4px 0; margin: 0;">
+        <span style="flex: 1;">{{ flavor.flavor_name }}</span>
+        <span style="flex: 1; text-align: center;">{{ flavor.description }}</span>
+        <span style="flex: 1; text-align: right;">(Available: {{ flavor.available_from }} to {{ flavor.available_until }})</span>
+    </li> 
+    {% endfor %}
+</ul>
+<p><a href="{% url 'add_flavor' %}">Add New Flavor</a></p>
+</div>

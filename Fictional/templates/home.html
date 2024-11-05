@@ -1,0 +1,31 @@
+
+
+<style>
+    body {
+            background-color: #48c5e1; /* Set your desired background color for the entire page */
+            margin: 0; /* Remove default body margin */
+            font-family: Arial, sans-serif; /* Optional: set a font for better readability */
+        }
+        
+    .welcome-section {
+        text-align: center; /* Center-aligns text */
+        background-color: #3c6f92; /* Change to your desired background color */
+        padding: 20px; /* Adds some padding around the content */
+        border-radius: 8px; /* Optional: adds rounded corners */
+        margin: 20px; /* Optional: adds some margin outside the section */
+    }
+    .welcome-section a {
+        display: block; /* Makes links stack vertically */
+        margin: 10px 0; /* Adds space between links */
+        text-decoration: none; /* Removes underline from links */
+        color: #8f9ea9; /* Change to your desired text color */
+        font-weight: bold; /* Makes the text bold */
+    }
+</style>
+
+<div class="welcome-section">
+    <h2>Welcome to the Chocolate House</h2>
+    <p><a href="{% url 'seasonal_flavors' %}">Seasonal Flavors</a></p>
+    <p><a href="{% url 'ingredient_inventory' %}">Ingredient Inventory</a></p>
+    <p><a href="{% url 'customer_suggestions' %}">Customer Suggestions</a></p>
+</div>

@@ -1,0 +1,12 @@
+<h2>Customer Suggestions</h2>
+<div style="background-color: #c0aab7; padding: 20px; border-radius: 8px;"> 
+<ul style="list-style-type: none; padding: 0; margin: 0;"></ul>
+    {% for suggestion in suggestions %}
+    <li style="display: flex; justify-content: space-between; padding: 4px 0; margin: 0;">
+        <span style="flex: 1;">{{ suggestion.customer_name }} suggested {{ suggestion.flavor_suggestion }}</span>
+        <span style="flex: 1; text-align: right;">(Allergy Concern: {{ suggestion.allergy_concern }})</span>
+    </li>
+    {% endfor %}
+</ul>
+<p><a href="{% url 'add_suggestion' %}">Add New Suggestion</a></p>
+</div>
